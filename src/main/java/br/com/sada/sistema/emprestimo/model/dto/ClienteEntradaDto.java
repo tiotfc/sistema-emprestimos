@@ -36,8 +36,12 @@ public class ClienteEntradaDto {
 		return cpf;
 	}
 
+	public List<ContaEntradaDto> getListaContas() {
+		return listaContas;
+	}
+
 	public Cliente toCliente() {
-		Cliente cliente = new Cliente(nome, salario, dataContratacao, patrimonio, cpf);
+		Cliente cliente = new Cliente(nome, salario, dataContratacao, patrimonio, cpf, null, null);
 		listaContas.stream().forEach(i -> {
 			cliente.adicionaConta(new Conta(i.getAgencia(), i.getNumero(), i.getSaldo()));
 		});

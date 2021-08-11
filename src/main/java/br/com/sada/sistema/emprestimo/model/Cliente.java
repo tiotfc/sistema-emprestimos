@@ -29,25 +29,20 @@ public class Cliente {
 
 	public Cliente() {
 	}
-	
-	public Cliente(String nome, BigDecimal salario, LocalDate dataContratacao, BigDecimal patrimonio,
-			String cpf, List<Conta> conta) {
-		this.nome = nome;
-		this.salario = salario;
-		this.dataContratacao = dataContratacao;
-		this.patrimonio = patrimonio;
-		this.cpf = cpf;
-		this.conta = conta;
-	}
-	
-	public Cliente(String nome, BigDecimal salario, LocalDate dataContratacao, BigDecimal patrimonio, String cpf) {
+
+	public Cliente(String nome, BigDecimal salario, LocalDate dataContratacao, BigDecimal patrimonio, String cpf,
+			List<Conta> conta, List<Proposta> proposta) {
 		super();
 		this.nome = nome;
 		this.salario = salario;
 		this.dataContratacao = dataContratacao;
 		this.patrimonio = patrimonio;
 		this.cpf = cpf;
+		this.conta = conta;
+		this.proposta = proposta;
 	}
+
+
 
 	public Integer getId() {
 		return id;
