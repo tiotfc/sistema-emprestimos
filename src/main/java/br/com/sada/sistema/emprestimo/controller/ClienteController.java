@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,7 +29,7 @@ public class ClienteController {
 
 	@PostMapping
 	public Cliente salvar(@RequestBody @Valid ClienteEntradaDto clienteEntradaDto) {
-		return clienteServiceImpl.salvar(clienteEntradaDto.toCliente());
+		return clienteServiceImpl.salvar(clienteEntradaDto);
 	}
 	
 	@GetMapping
@@ -39,6 +40,12 @@ public class ClienteController {
 	@GetMapping("/{id}")
 	public Cliente buscarPorID(@PathVariable int id) {
 		return clienteServiceImpl.buscarPorId(id);
+	}
+	
+	
+	@DeleteMapping("/{id}") 
+	public void deletar(@PathVariable int id) {
+		clienteServiceImpl.deletar(id);
 	}
 	
 }

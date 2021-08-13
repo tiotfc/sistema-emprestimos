@@ -27,10 +27,24 @@ public class Proposta {
 	@ManyToOne
 	@JsonIgnore
 	private Cliente cliente;
-	
+
 	@OneToMany(mappedBy = "proposta")
 	private List<Parcela> parcelas;
+
+	public Proposta() {
+	}
 	
+	public Proposta(BigDecimal valor, BigDecimal taxaJuros, Integer qtdParcelas, LocalDate dataContratacao,
+			String status, Cliente cliente, List<Parcela> parcelas) {
+		super();
+		this.valor = valor;
+		this.taxaJuros = taxaJuros;
+		this.qtdParcelas = qtdParcelas;
+		this.dataContratacao = dataContratacao;
+		this.status = status;
+		this.cliente = cliente;
+		this.parcelas = parcelas;
+	}
 
 	public Integer getId() {
 		return id;
@@ -50,6 +64,10 @@ public class Proposta {
 
 	public Cliente getCliente() {
 		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 
 	public LocalDate getDataContratacao() {

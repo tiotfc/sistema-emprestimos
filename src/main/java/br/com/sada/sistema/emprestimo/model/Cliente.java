@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +14,7 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Cliente {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -22,9 +23,9 @@ public class Cliente {
 	private LocalDate dataContratacao;
 	private BigDecimal patrimonio;
 	private String cpf;
-	@OneToMany(mappedBy = "cliente")
+	@OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
 	private List<Conta> conta = new ArrayList<>();
-	@OneToMany(mappedBy = "cliente")
+	@OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
 	private List<Proposta> proposta = new ArrayList<>();
 
 	public Cliente() {
@@ -42,32 +43,35 @@ public class Cliente {
 		this.proposta = proposta;
 	}
 
-
-
 	public Integer getId() {
 		return id;
 	}
+
 	public String getNome() {
 		return nome;
 	}
+
 	public BigDecimal getSalario() {
 		return salario;
 	}
+
 	public LocalDate getDataContratacao() {
 		return dataContratacao;
 	}
+
 	public BigDecimal getPatrimonio() {
 		return patrimonio;
 	}
+
 	public String getCpf() {
 		return cpf;
 	}
-	
+
 	public void adicionaConta(Conta conta) {
 		conta.setCliente(this);
 		this.conta.add(conta);
 	}
-	
+
 	public void adicionaProposta(Proposta proposta) {
 		this.proposta.add(proposta);
 	}

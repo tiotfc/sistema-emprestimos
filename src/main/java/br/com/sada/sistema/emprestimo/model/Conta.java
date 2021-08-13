@@ -8,8 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 @Entity
 public class Conta {
 
@@ -20,7 +18,6 @@ public class Conta {
 	private String numero;
 	private BigDecimal saldo;
 	@ManyToOne
-	@JsonIgnore
 	private Cliente cliente;
 
 	public Conta() {
@@ -32,7 +29,6 @@ public class Conta {
 		this.numero = numero;
 		this.saldo = saldo;
 	}
-
 
 	public Integer getId() {
 		return id;

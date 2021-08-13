@@ -6,9 +6,14 @@ import br.com.sada.sistema.emprestimo.model.Conta;
 
 public class ContaEntradaDto {
 
+	private int idCliente;
 	private String agencia;
 	private String numero;
 	private BigDecimal saldo;
+	
+	public int getIdCliente() {
+		return idCliente;
+	}
 
 	public String getAgencia() {
 		return agencia;

@@ -22,6 +22,18 @@ public class Parcela {
 	@ManyToOne
 	private Proposta proposta;
 
+	public Parcela() {
+	}
+
+	public Parcela(Integer numero, BigDecimal valor, LocalDate dataParcela, String status, Proposta proposta) {
+		super();
+		this.numero = numero;
+		this.valor = valor;
+		this.dataParcela = dataParcela;
+		this.status = status;
+		this.proposta = proposta;
+	}
+
 	public Integer getId() {
 		return id;
 	}
@@ -44,6 +56,10 @@ public class Parcela {
 
 	public Proposta getProposta() {
 		return proposta;
+	}
+
+	public void setProposta(Proposta proposta) {
+		this.proposta = proposta;
 	}
 
 }
