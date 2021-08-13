@@ -1,0 +1,20 @@
+Mini Projeto - Santander
+Simulador de Linhas de Crédito - (Empréstimo Pessoal)
+A sua squad ficou responsável por desenvolver o próximo produto relacionado a simulação de linhas de crédito, para isso é necessário uma 
+POC (proof of concept) focada em empréstimo pessoal para entender se as regras de negócio estão apropriadas para este novo produto, e é sua tarefa realizá-la.
+
+Como requisitos básicos é necessário que a empresa credora deve garantir que o solicitante possua formas de honrar o seu débito. 
+
+Alguns exemplos que podem vir a calhar são:
+
+Verificar
+- tempo de serviço
+- valor do patrimônio
+- salário do cliente
+
+Você também deverá calcular os juros decorrentes das parcelas utilizando como base 15% ao ano, 
+com o valor máximo da parcela sendo referente a até 15% do salário informado.
+ 
+Você deve testar os módulos criados de forma a assegurar que os resultados sejam os mais confiáveis possível.
+
+O P.O. do projeto deixou aberto para novas ideias, caso pense em alguma coisa será apenas necessário documentar o incremento para testes futuros.

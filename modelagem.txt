@@ -1,0 +1,25 @@
+Cliente
+	nome
+	salario
+	dataContratação
+	patrimonio
+	cpf
+	
+Proposta
+	valor
+	taxaJuros
+	quantidadeParcelas
+	cliente
+	dataContratacao
+	status
+Parcela
+	valor
+	numero
+	dataParcela
+	status
+	proposta
+Conta
+	cliente
+	saldo
+	numero
+	agencia
