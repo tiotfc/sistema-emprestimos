@@ -2,6 +2,7 @@ package br.com.sada.sistema.emprestimo.controller;
 
 import javax.validation.Valid;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.sada.sistema.emprestimo.assemblers.ContaAssembler;
 import br.com.sada.sistema.emprestimo.model.Conta;
 import br.com.sada.sistema.emprestimo.model.dto.ContaEntradaDto;
 import br.com.sada.sistema.emprestimo.service.ContaServiceImpl;
@@ -19,10 +21,12 @@ import br.com.sada.sistema.emprestimo.service.ContaServiceImpl;
 public class ContaController {
 
 	private ContaServiceImpl contaServiceImpl;
+	private ContaAssembler contaAssembler;
 
-	public ContaController(ContaServiceImpl clienteServiceImpl) {
+	public ContaController(ContaServiceImpl contaServiceImpl, ContaAssembler contaAssembler) {
 		super();
-		this.contaServiceImpl = clienteServiceImpl;
+		this.contaServiceImpl = contaServiceImpl;
+		this.contaAssembler = contaAssembler;
 	}
 
 	@PostMapping
@@ -31,8 +35,8 @@ public class ContaController {
 	}
 	
 	@GetMapping("/{id}")
-	public Conta buscarPorId(@PathVariable int id) {
-		return contaServiceImpl.buscarPorId(id);
+	public ResponseEntity<?> buscarPorId(@PathVariable int id) {
+		return ResponseEntity.ok(contaAssembler.toModel(contaServiceImpl.buscarPorId(id)));
 	}
 	
 	@DeleteMapping("/{id}") 
