@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import br.com.sada.sistema.emprestimo.model.Cliente;
-import br.com.sada.sistema.emprestimo.model.dto.ClienteEntradaDto;
+import br.com.sada.sistema.emprestimo.model.dto.ClienteDto;
 import br.com.sada.sistema.emprestimo.repository.ClienteRepository;
 
 @Service
@@ -17,7 +17,7 @@ public class ClienteServiceImpl {
 		this.clienteRepository = clienteRepository;
 	}
 	
-	public Cliente salvar(ClienteEntradaDto clienteEntradaDto) {
+	public Cliente salvar(ClienteDto clienteEntradaDto) {
 		return clienteRepository.save(clienteEntradaDto.toCliente());
 	}
 

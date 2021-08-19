@@ -18,3 +18,18 @@ com o valor máximo da parcela sendo referente a até 15% do salário informado.
 Você deve testar os módulos criados de forma a assegurar que os resultados sejam os mais confiáveis possível.
 
 O P.O. do projeto deixou aberto para novas ideias, caso pense em alguma coisa será apenas necessário documentar o incremento para testes futuros.
+
+
+Proposta
+	Buscar proposta por cliente
+	Validar cliente ao efetivar proposta.
+ok	Gerar parcelas.	
+
+Parcelas
+	Buscar Parcelas por proposta.
+	
+Tratamento de Erros
+	Entidade não cadastrada.
+	Campos obrigatorios
+	
+	
