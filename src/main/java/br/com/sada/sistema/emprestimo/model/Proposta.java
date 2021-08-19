@@ -74,9 +74,21 @@ public class Proposta {
 	public LocalDate getDataContratacao() {
 		return dataContratacao;
 	}
+	
+	public void setDataContratacao(LocalDate dataContratacao) {
+		this.dataContratacao = dataContratacao;
+	}
 
 	public String getStatus() {
 		return status;
 	}
 
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public List<Parcela> getParcelas() {
+		return parcelas;
+	}
+	
 }

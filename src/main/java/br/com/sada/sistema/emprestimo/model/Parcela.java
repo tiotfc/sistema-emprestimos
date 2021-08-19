@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Parcela {
 
@@ -20,6 +22,7 @@ public class Parcela {
 	private LocalDate dataParcela;
 	private String status;
 	@ManyToOne
+	@JsonIgnore
 	private Proposta proposta;
 
 	public Parcela() {

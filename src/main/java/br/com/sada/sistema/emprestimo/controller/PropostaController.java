@@ -39,4 +39,9 @@ public class PropostaController {
 	public void deletar(@PathVariable int id) {
 		propostaServiceImpl.deletar(id);
 	}
+	
+	@GetMapping("/contratar/{id}")
+	public Proposta contratar(@PathVariable int id) {
+		return propostaServiceImpl.contratarProposta(id);
+	}
 }
