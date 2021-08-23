@@ -11,7 +11,6 @@ public class PropostaEnradaDto {
 	private BigDecimal valor;
 	private BigDecimal taxaJuros;
 	private Integer qtdParcelas;
-	private LocalDate dataContratacao;
 	private String status;
 	
 	public int getIdCliente() {
@@ -30,16 +29,12 @@ public class PropostaEnradaDto {
 		return qtdParcelas;
 	}
 
-	public LocalDate getDataContratacao() {
-		return dataContratacao;
-	}
-
 	public String getStatus() {
 		return status;
 	}
 
 	public Proposta toProposta() {
-		return new Proposta(valor, taxaJuros, qtdParcelas, dataContratacao, status, null, null);
+		return new Proposta(valor, taxaJuros, qtdParcelas, LocalDate.now(), status, null, null);
 	}
 
 }
