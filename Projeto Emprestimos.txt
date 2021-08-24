@@ -26,7 +26,7 @@ Proposta
 ok	Gerar parcelas.	
 
 Parcelas
-	Buscar Parcelas por proposta.
+	Buscar Parcelas por pr oposta.
 	
 Tratamento de Erros
 	Entidade não cadastrada.
