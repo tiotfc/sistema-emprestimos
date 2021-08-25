@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.sada.sistema.emprestimo</groupId>
-	<artifactId>sistema-emprestimo</artifactId>
+	<artifactId>sistema-emprestimos</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>sistema-emprestimo</name>
+	<name>sistema-emprestimos</name>
 	<description>Sistema de Emprestimo</description>
 	<properties>
 		<java.version>11</java.version>
