@@ -20,3 +20,11 @@ insert into parcela(data_parcela, numero, status, valor, proposta_id) values ('2
 insert into parcela(data_parcela, numero, status, valor, proposta_id) values ('2021-06-01', 1, 'ABERTA', 1000.00, 2);
 insert into parcela(data_parcela, numero, status, valor, proposta_id) values ('2021-05-01', 1, 'PAGA', 1000.00, 3);
 insert into parcela(data_parcela, numero, status, valor, proposta_id) values ('2021-05-01', 1, 'PAGA', 1000.00, 4);
+
+
+INSERT INTO usuario VALUES (null,'joao@hotmail.com','$2a$12$pdlJY7IGuULz44gDcwzOKeW0YhIGRwPG3aHUw5TxMxgUV60KEwp6y');
+
+INSERT INTO perfil VALUES(null,'USUARIO');
+INSERT INTO perfil VALUES(null,'ADM');
+
+INSERT INTO usuario_perfis VALUES (1,1);
